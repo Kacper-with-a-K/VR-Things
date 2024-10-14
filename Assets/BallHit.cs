@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class BallHit : MonoBehaviour
 {
     public Rigidbody body;
     public AudioClip bounce;
-    AudioSource audio;
+    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class BallHit : MonoBehaviour
         GetComponent<Rigidbody>();
     }
 
-    private void OnCollisionEnter()
+    public void OnCollisionEnter()
     {
         audio.PlayOneShot(bounce, body.velocity.magnitude);
     }
