@@ -5364,6 +5364,12 @@ PrefabInstance:
       propertyPath: m_SmoothRotation
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1417018947604194929, guid: 7ef7c010f0501dc4f9c2983cdd71ddd0,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 119302499102753868, guid: 7302d9405775f604cb9547e93531c1b0,
+        type: 3}
     - target: {fileID: 1974721469234614050, guid: 7ef7c010f0501dc4f9c2983cdd71ddd0,
         type: 3}
       propertyPath: m_Name
@@ -5377,12 +5383,22 @@ PrefabInstance:
     - target: {fileID: 2568993142475448425, guid: 7ef7c010f0501dc4f9c2983cdd71ddd0,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 73.273865
+      value: 90.882645
+      objectReference: {fileID: 0}
+    - target: {fileID: 2568993142475448425, guid: 7ef7c010f0501dc4f9c2983cdd71ddd0,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2568993142475448425, guid: 7ef7c010f0501dc4f9c2983cdd71ddd0,
         type: 3}
       propertyPath: m_InnerSpotAngle
-      value: 21.802082
+      value: 35.347294
+      objectReference: {fileID: 0}
+    - target: {fileID: 2568993142475448425, guid: 7ef7c010f0501dc4f9c2983cdd71ddd0,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2568993142475448425, guid: 7ef7c010f0501dc4f9c2983cdd71ddd0,
         type: 3}
@@ -5517,7 +5533,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5559,7 +5575,7 @@ Light:
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 1.01
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -5575,13 +5591,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592291321}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.41782436, y: -0.66468036, z: -0.43426242, w: 0.4416322}
+  m_LocalRotation: {x: 0.53233886, y: -0.6746689, z: -0.4206466, w: 0.29067808}
   m_LocalPosition: {x: 13.52, y: -1.23, z: -36.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -12.019, y: -103.767, z: -73.751}
+  m_LocalEulerAnglesHint: {x: -14.958, y: -119.595, z: -85.289}
 --- !u!114 &592291324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11670,7 +11686,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 62
   m_CollisionDetection: 0
 --- !u!4 &1236077640 stripped
 Transform:
@@ -11841,7 +11857,7 @@ HingeJoint:
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
-  m_AutoConfigureConnectedAnchor: 0
+  m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   serializedVersion: 2
   m_UseSpring: 0
@@ -11855,7 +11871,7 @@ HingeJoint:
     force: 0
     freeSpin: 0
   m_UseLimits: 1
-  m_ExtendedLimits: 0
+  m_ExtendedLimits: 1
   m_UseAcceleration: 0
   m_Limits:
     min: 44.962433
@@ -13086,7 +13102,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &1335891056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13120,6 +13136,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25548eb57f12b547b1fbf57cbe58ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!195 &1335891058
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335891052}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1340547495 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6874568210070322553, guid: 7e229d25530b37e4c9444dc5e0758e6d,
@@ -19065,6 +19103,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1335891057}
+    - targetCorrespondingSourceObject: {fileID: 141014, guid: e8a98f96516902e4384263b5d25a25c6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1335891058}
   m_SourcePrefab: {fileID: 100100000, guid: e8a98f96516902e4384263b5d25a25c6, type: 3}
 --- !u!1 &2022307193 stripped
 GameObject:
