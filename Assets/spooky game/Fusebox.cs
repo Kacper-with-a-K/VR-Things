@@ -6,6 +6,8 @@ public class Fusebox : MonoBehaviour
 {
     public GameObject Player;
 
+    public GameObject FlashLight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +23,6 @@ public class Fusebox : MonoBehaviour
     public void makeSmall()
     {
         Player.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        FlashLight.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
     }
 }
