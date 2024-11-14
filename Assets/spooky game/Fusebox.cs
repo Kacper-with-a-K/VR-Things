@@ -8,6 +8,10 @@ public class Fusebox : MonoBehaviour
 
     public GameObject FlashLight;
 
+    public GameObject gems;
+
+    public Manager manager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +26,8 @@ public class Fusebox : MonoBehaviour
 
     public void makeSmall()
     {
+        gems.SetActive(true);
+        manager.small = true;
         Player.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         FlashLight.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
     }
