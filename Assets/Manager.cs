@@ -26,4 +26,9 @@ public class Manager : MonoBehaviour
             FlashLight.transform.localScale = new Vector3(1f, 1f, 1f);
         }
     }
+
+    public void IsSmall()
+    {
+        small = true;
+    }
 }
