@@ -49,7 +49,7 @@ public class enemy : MonoBehaviour
         // Rotate to direction it is facing
         if (normalizedRangeToClose != Vector3.zero)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(normalizedRangeToClose);
+            Quaternion targetRotation = Quaternion.LookRotation(normalizedRangeToClose) * Quaternion.Euler(0, 180, 0);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
 
