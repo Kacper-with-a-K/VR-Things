@@ -15,6 +15,8 @@ public class enemy : MonoBehaviour
 
     public GameObject RespawnTips;
 
+    public AudioClip sound;
+
     public GameObject respawnTarget;
     Animator anim;
 
@@ -35,6 +37,7 @@ public class enemy : MonoBehaviour
     {
         if (other.gameObject == target)
         {
+            GetComponent<AudioSource>().PlayOneShot(sound);
             spotted = false;
         }
     }

@@ -10,6 +10,8 @@ public class Fusebox : MonoBehaviour
 
     public GameObject gems;
 
+    public GameObject tips;
+
     public GameObject smallTips;
 
     public Manager manager;
@@ -28,6 +30,7 @@ public class Fusebox : MonoBehaviour
 
     public void makeSmall()
     {
+        tips.SetActive(false); 
         smallTips.SetActive(true);
         gems.SetActive(true);
         manager.small = true;
