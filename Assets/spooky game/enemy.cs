@@ -6,7 +6,7 @@ public class enemy1 : MonoBehaviour
 {
     public GameObject[] pattern;
     private int patternIndex = 0;
-    public float speed = 1;
+    public float speed;
     public float rotationSpeed = 5f;
 
     public bool spotted;
@@ -14,6 +14,8 @@ public class enemy1 : MonoBehaviour
     public GameObject target;
 
     public GameObject RespawnTips;
+
+    public AudioSource squeel;
 
     public AudioClip sound;
 
@@ -23,12 +25,16 @@ public class enemy1 : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        squeel = GetComponent<AudioSource>();
     }
+    
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == target)
         {
+            
+            squeel.PlayOneShot(sound);
             spotted = true;
         }
     }
