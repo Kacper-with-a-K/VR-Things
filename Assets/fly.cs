@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shoot : MonoBehaviour
+public class fly : MonoBehaviour
 {
-
-    public GameObject staple;
+    Rigidbody rb;
+    public float force = 10f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+        rb.AddForce(transform.up * force);
     }
 
     // Update is called once per frame
@@ -18,8 +19,5 @@ public class Shoot : MonoBehaviour
         
     }
 
-    public void fireStaple()
-    {
-        Instantiate(staple, transform);
-    }
+
 }

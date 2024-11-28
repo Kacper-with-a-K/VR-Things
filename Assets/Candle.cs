@@ -6,6 +6,7 @@ public class Candle : MonoBehaviour
 {
 
     public GameObject Fire;
+    public GameObject Flame;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +21,8 @@ public class Candle : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Fire")
-        {
+        
             Fire.SetActive(true);
-        }
+        
     }
 }
